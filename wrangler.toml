@@ -1,0 +1,10 @@
+[build]
+command = "npm run build"
+publish = "dist"
+
+[site]
+include = "**/*"
+entry-point = "src/index.html"
+
+[context]
+production

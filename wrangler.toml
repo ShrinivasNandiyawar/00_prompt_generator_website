@@ -7,4 +7,4 @@ include = "**/*"
 entry-point = "src/index.html"
 
 [context]
-production
+context = "production"

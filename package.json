@@ -1,5 +1,7 @@
 {
-  "dependencies": {
-    "wrangler": "^4.2.0"
+  "name": "www.sol-vanta.com",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "mkdir -p dist && cp -r src/* dist/ && rm -rf dist/workers-site && mkdir -p dist/workers-site && cp src/workers-site/index.js dist/workers-site/"
   }
 }

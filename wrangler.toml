@@ -1,10 +1,21 @@
+name = "promptgenerator"
+account_id = "f12b7c3d91cfa96af84b5b2bf5f5d314"
+main = "dist/workers-site/index.js"
+type = "javascript"
+workers_dev = false  # Since you're deploying to a custom domain
+compatibility_date = "2024-03-20"
+
+# Route to deploy the Worker to your domain
+routes = ["www.sol-vanta.com/*"]
+
 [build]
 command = "npm run build"
-publish = "dist"
 
-[site]
-include = "**/*"
-entry-point = "src/index.html"
+# (Optional) KV Storage - If you need persistent key-value storage
+#[[kv_namespaces]]
+#binding = "PROMPT_KV"
+#id = "your-kv-namespace-id"
 
-[context]
-context = "production"
+# (Optional) Environment Variables - For API keys or other config settings
+#[vars]
+#OPENAI_API_KEY = "your-api-key"
